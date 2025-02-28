@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VirGam Romantis</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="slider">
+            <div class="scene">
+                <h1>Level 1</h1>
+                <p>Selamat datang di dunia cinta! ❤️</p>
+                <img src="bear.png" class="character" alt="Boneka Beruang">
+                <button onclick="showLove()">Kirim Cinta 💌</button>
+            </div>
+            <div class="scene">
+                <h1>Level 2</h1>
+                <p>Geser dan buat momen indah!</p>
+                <img src="heart.png" class="item" alt="Hati Cinta">
+                <button onclick="playMusic()">Putar Musik 🎶</button>
+            </div>
+            <div class="scene">
+                <h1>Level 3</h1>
+                <p>Selamat! Kamu menemukan cinta sejati! 💕</p>
+                <img src="couple.png" class="item" alt="Pasangan Romantis">
+                <button onclick="showSurprise()">Hadiah Spesial 🎁</button>
+            </div>
+        </div>
+    </div>
+
+    <button class="prev" onclick="moveScene(-1)">❮</button>
+    <button class="next" onclick="moveScene(1)">❯</button>
+
+    <audio id="loveSound">
+        <source src="love.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="music">
+        <source src="romantic.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>

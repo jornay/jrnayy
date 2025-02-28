@@ -1,0 +1,99 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    overflow: hidden;
+    background: linear-gradient(to right, #ff758c, #ff7eb3);
+    color: white;
+}
+
+/* Efek hujan love */
+@keyframes fall {
+    0% { transform: translateY(-100px); opacity: 1; }
+    100% { transform: translateY(100vh); opacity: 0; }
+}
+
+.love {
+    position: absolute;
+    top: -50px;
+    font-size: 24px;
+    color: red;
+    animation: fall 3s linear infinite;
+}
+
+/* Container game */
+.game-container {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Slider */
+.slider {
+    display: flex;
+    width: 300vw;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Setiap scene */
+.scene {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Animasi Karakter */
+.character {
+    width: 150px;
+    animation: float 3s infinite alternate;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
+
+/* Tombol Geser */
+button {
+    background-color: #ff4d6d;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    color: white;
+    border-radius: 20px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #ff2e5a;
+}
+
+.prev, .next {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.6);
+    border: none;
+    padding: 15px 20px;
+    font-size: 2rem;
+    cursor: pointer;
+    color: black;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: white;
+}
